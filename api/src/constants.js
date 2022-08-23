@@ -10,7 +10,15 @@ const messageStatus = {
   REJECTED: 2,
 };
 
+const messageTypes = {
+  SMS: 0,
+  WTSPP: 1,
+  EMAIL: 2,
+  MESSENGER: 3,
+};
+
 module.exports = {
   permissionsLevel,
   messageStatus,
+  messageTypes,
 };

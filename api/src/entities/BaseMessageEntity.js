@@ -1,5 +1,5 @@
 const BaseEntity = require("./BaseEntity");
-const { PENDING } = require("../constants");
+const { messageStatus, messageTypes } = require("../constants");
 
 class BaseMessageEntity extends BaseEntity {
   constructor({ messageBody, sender, recipientName, unitId }) {
@@ -8,8 +8,9 @@ class BaseMessageEntity extends BaseEntity {
     this.sender = sender;
     this.recipientName = recipientName;
     this.unitId = unitId;
-    this.status = PENDING;
+    this.status = messageStatus.PENDING;
     this.sentAt = new Date(Date.now());
+    this.type = messageTypes.SMS;
   }
 }
 

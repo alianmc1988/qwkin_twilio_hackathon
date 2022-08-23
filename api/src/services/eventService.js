@@ -10,7 +10,7 @@ class EventService {
   }
 
   static async create(event) {
-    return EventModel.create(event);
+    return (eventCreated = EventModel.create(event));
   }
 
   static async update(id, event) {

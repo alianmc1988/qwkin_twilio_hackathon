@@ -35,6 +35,7 @@ class EventController {
       message
     );
     const response = await EventService.create(event);
+    const smsSent = await SendMessageService.sendSMS(event);
     if (response.error) {
       next(response.error);
     }
